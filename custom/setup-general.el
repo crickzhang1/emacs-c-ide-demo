@@ -1,8 +1,49 @@
-(menu-bar-mode -1)
+(setq inhibit-splash-screen t)
+;;(menu-bar-mode -1)
 (tool-bar-mode -1)
+(display-time-mode t)
+(display-battery-mode t)
+(size-indication-mode t)
+(column-number-mode t)
+(show-paren-mode t)
+(global-hl-line-mode 1)
+(global-linum-mode t)
+(toggle-save-place-globally t)
+;; Disable auto-backup
+(setq make-backup-files nil)
+;; Enable recent-files list in Menu
+(recentf-mode t)
+(setq recentf-max-menu-item 10)
+
+(set-frame-font "DejaVu Sans Mono")
+
+;; Theme
+;;(load-theme 'material t)
+(use-package monokai-theme)
+(load-theme 'monokai t)
+
+;; Show buffer name and file name in title bar
+(setq-default frame-title-format "%b (%f)")
 
 (setq gc-cons-threshold 100000000)
 (setq inhibit-startup-message t)
+
+;; start Emacs server
+(server-force-delete)
+(server-start)
+
+;; Highlight lines longer than 80 characters
+;; from: https://stackoverflow.com/questions/6344474/how-can-i-make-emacs-highlight-lines-that-go-over-80-chars
+(add-hook 'c-mode-hook '(lambda () (highlight-lines-matching-regexp ".\\{81\\}" 'hi-yellow)))
+(add-hook 'c++-mode-hook '(lambda () (highlight-lines-matching-regexp ".\\{81\\}" 'hi-yellow)))
+
+;; Code completion/navigation using GNU Global
+;; Please note `file-truename' must be used!
+;; http://blog.binchen.org/posts/emacs-as-c-ide-easy-way.html
+(setenv "GTAGSLIBPATH" (concat "/usr/include"
+                               ":"
+                               "/usr/linux/include"))
+(setenv "MAKEOBJDIRPREFIX" (file-truename "~/workspace/gtags/"))
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
@@ -15,7 +56,7 @@
 (setq-default indent-tabs-mode nil)
 
 ;; set appearance of a tab that is represented by 4 spaces
-(setq-default tab-width 4)
+(setq-default tab-width 8)
 
 ;; Compilation
 (global-set-key (kbd "<f5>") (lambda ()

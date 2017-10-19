@@ -1,0 +1,11 @@
+auto-save-list/
+elpa/
+semanticdb/
+snippets/
+ede-projects.el
+projectile*
+recentf
+*~
+.*~
+*/*~
+

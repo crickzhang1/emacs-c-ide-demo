@@ -1,6 +1,27 @@
+;;; Emacs configuration (C/C++ oriented)
+;;
+;; Modified from Tuhdo's c-demo
+;; see http://tuhdo.github.io/c-ide.html
+;;
+;; References:
+;; * http://book.emacs-china.org/
+;; * https://realpython.com/blog/python/emacs-the-best-python-editor/
+
+;; * Using `add-to-list' to add items to existing list one at a time.
+;; * Using `add-hook' to specifically customize a package/mode.
+;; * Using `global-set-key' to customize key bindings.
+;; * Using `setq' to set variables.
+
+;;; Package setup
+
+;; Require >= Emacs 24.x
+;; Add MELPA repository.
+;; * https://www.emacswiki.org/emacs/ELPA
+;; * https://melpa.org/#/getting-started
 (require 'package)
 (add-to-list 'package-archives
-         '("melpa" . "http://melpa.org/packages/") t)
+         ;;'("melpa" . "http://melpa.org/packages/") t)
+         '("melpa" . "http://elpa.emacs-china.org/melpa/") t)
 
 (package-initialize)
 
@@ -24,13 +45,12 @@
 (require 'setup-cedet)
 (require 'setup-editing)
 
-
-
 ;; function-args
 ;; (require 'function-args)
 ;; (fa-config-default)
 ;; (define-key c-mode-map  [(tab)] 'company-complete)
 ;; (define-key c++-mode-map  [(tab)] 'company-complete)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -38,7 +58,8 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (zygospore helm-gtags helm yasnippet ws-butler volatile-highlights use-package undo-tree iedit dtrt-indent counsel-projectile company clean-aindent-mode anzu))))
+    (zygospore helm-gtags helm yasnippet ws-butler volatile-highlights use-package undo-tree iedit dtrt-indent counsel-projectile company clean-aindent-mode anzu monokai-theme adoc-mode markdown-mode)))
+ '(save-place t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

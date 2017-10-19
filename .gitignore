@@ -3,9 +3,9 @@ elpa/
 semanticdb/
 snippets/
 ede-projects.el
+places
 projectile*
 recentf
 *~
 .*~
 */*~
-

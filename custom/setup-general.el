@@ -42,7 +42,9 @@
 ;; http://blog.binchen.org/posts/emacs-as-c-ide-easy-way.html
 (setenv "GTAGSLIBPATH" (concat "/usr/include"
                                ":"
-                               "/usr/linux/include"))
+                               "/usr/linux/include"
+                               ":"
+                               (file-truename "~/usr/local/include")))
 (setenv "MAKEOBJDIRPREFIX" (file-truename "~/workspace/gtags/"))
 
 (defalias 'yes-or-no-p 'y-or-n-p)

@@ -44,7 +44,9 @@
                                ":"
                                "/usr/linux/include"
                                ":"
-                               (file-truename "~/usr/local/include")))
+                               (file-truename "~/usr/local/include")
+                               ":"
+                               (file-truename "~/usr/local/linux/include")))
 (setenv "MAKEOBJDIRPREFIX" (file-truename "~/workspace/gtags/"))
 
 (defalias 'yes-or-no-p 'y-or-n-p)

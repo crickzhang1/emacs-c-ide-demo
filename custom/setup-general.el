@@ -32,6 +32,10 @@
 (server-force-delete)
 (server-start)
 
+;; Enable adoc-mode for asciidoc docs
+;; see for more details: https://github.com/sensorflo/adoc-mode/wiki
+(add-to-list 'auto-mode-alist '("\\.adoc" . adoc-mode))
+
 ;; Highlight lines longer than 80 characters
 ;; from: https://stackoverflow.com/questions/6344474/how-can-i-make-emacs-highlight-lines-that-go-over-80-chars
 (add-hook 'c-mode-hook '(lambda () (highlight-lines-matching-regexp ".\\{81\\}" 'hi-yellow)))

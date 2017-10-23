@@ -32,11 +32,13 @@
   (package-install 'use-package))
 
 (require 'use-package)
+;; To install packages automatically if not already present
 (setq use-package-always-ensure t)
 
 (add-to-list 'load-path "~/.emacs.d/custom")
 
 (require 'setup-general)
+
 (if (version< emacs-version "24.4")
     (require 'setup-ivy-counsel)
   (require 'setup-helm)
@@ -44,12 +46,12 @@
 ;; (require 'setup-ggtags)
 (require 'setup-cedet)
 (require 'setup-editing)
+(require 'setup-c)
 
 ;; function-args
-;; (require 'function-args)
-;; (fa-config-default)
-;; (define-key c-mode-map  [(tab)] 'company-complete)
-;; (define-key c++-mode-map  [(tab)] 'company-complete)
+(use-package function-args
+  :config
+  (fa-config-default))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

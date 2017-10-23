@@ -17,11 +17,6 @@
 
 (set-frame-font "DejaVu Sans Mono")
 
-;; Theme
-;;(load-theme 'material t)
-(use-package monokai-theme)
-(load-theme 'monokai t)
-
 ;; Show buffer name and file name in title bar
 (setq-default frame-title-format "%b (%f)")
 
@@ -32,11 +27,15 @@
 (server-force-delete)
 (server-start)
 
-(use-package adoc-mode)
+;; Theme
+(use-package monokai-theme
+  :config
+  (load-theme 'monokai t))
 
 ;; Enable adoc-mode for asciidoc docs
 ;; see for more details: https://github.com/sensorflo/adoc-mode/wiki
-(add-to-list 'auto-mode-alist '("\\.adoc" . adoc-mode))
+(use-package adoc-mode
+  :mode ("\\.adoc\\'" . adoc-mode))
 
 ;; Highlight lines longer than 80 characters
 ;; from: https://stackoverflow.com/questions/6344474/how-can-i-make-emacs-highlight-lines-that-go-over-80-chars

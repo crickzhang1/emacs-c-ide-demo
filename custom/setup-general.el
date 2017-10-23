@@ -32,6 +32,8 @@
 (server-force-delete)
 (server-start)
 
+(use-package adoc-mode)
+
 ;; Enable adoc-mode for asciidoc docs
 ;; see for more details: https://github.com/sensorflo/adoc-mode/wiki
 (add-to-list 'auto-mode-alist '("\\.adoc" . adoc-mode))

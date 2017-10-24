@@ -39,8 +39,8 @@
 
 ;; Highlight lines longer than 80 characters
 ;; from: https://stackoverflow.com/questions/6344474/how-can-i-make-emacs-highlight-lines-that-go-over-80-chars
-(add-hook 'c-mode-hook '(lambda () (highlight-lines-matching-regexp ".\\{81\\}" 'hi-yellow)))
-(add-hook 'c++-mode-hook '(lambda () (highlight-lines-matching-regexp ".\\{81\\}" 'hi-yellow)))
+;;(add-hook 'c-mode-hook '(lambda () (highlight-lines-matching-regexp ".\\{81\\}" 'hi-yellow)))
+;;(add-hook 'c++-mode-hook '(lambda () (highlight-lines-matching-regexp ".\\{81\\}" 'hi-yellow)))
 
 ;; Code completion/navigation using GNU Global
 ;; Please note `file-truename' must be used!
@@ -61,10 +61,7 @@
           (lambda () (interactive)
             (setq show-trailing-whitespace 1)))
 
-;; use space to indent by default
-(setq-default indent-tabs-mode nil)
-
-;; set appearance of a tab that is represented by 4 spaces
+;; set appearance of a tab that is represented by 8 spaces
 (setq-default tab-width 8)
 
 ;; Compilation

@@ -25,4 +25,12 @@
   (define-key c-mode-map  [(control tab)] 'company-complete)
   (define-key c++-mode-map  [(control tab)] 'company-complete))
 
+(use-package function-args
+  :config
+  (fa-config-default))
+
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+
+(set-default 'semantic-case-fold t)
+
 (provide 'setup-c)

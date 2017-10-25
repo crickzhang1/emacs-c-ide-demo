@@ -20,9 +20,9 @@
 (setq c-default-style "stroustrup"
       c-basic-offset 4)
 
-;; (use-package cc-mode
-;;   :init
-;;   (define-key c-mode-map  [(tab)] 'company-complete)
-;;   (define-key c++-mode-map  [(tab)] 'company-complete))
+(use-package cc-mode
+  :config
+  (define-key c-mode-map  [(control tab)] 'company-complete)
+  (define-key c++-mode-map  [(control tab)] 'company-complete))
 
 (provide 'setup-c)

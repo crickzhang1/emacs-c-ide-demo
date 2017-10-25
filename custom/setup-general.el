@@ -61,9 +61,6 @@
           (lambda () (interactive)
             (setq show-trailing-whitespace 1)))
 
-;; set appearance of a tab that is represented by 8 spaces
-(setq-default tab-width 8)
-
 ;; Compilation
 (global-set-key (kbd "<f5>") (lambda ()
                                (interactive)

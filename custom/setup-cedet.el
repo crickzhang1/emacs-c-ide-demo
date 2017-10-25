@@ -1,4 +1,4 @@
-(use-package cc-mode)
+;; (use-package cc-mode)
 (use-package semantic
   :config
   (global-semanticdb-minor-mode 1)

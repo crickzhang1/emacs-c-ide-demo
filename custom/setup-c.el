@@ -33,4 +33,18 @@
 
 (set-default 'semantic-case-fold t)
 
+(use-package flycheck
+  :init
+  (global-flycheck-mode))
+
+(use-package flycheck-color-mode-line
+  :config
+  (add-hook 'flycheck-mode-hook 'flycheck-color-mode-line-mode))
+
+(use-package flycheck-pos-tip
+  :config
+  (flycheck-pos-tip-mode))
+
+(use-package flycheck-pkg-config)
+
 (provide 'setup-c)

@@ -15,7 +15,7 @@
 (prefer-coding-system 'utf-8)
 
 (setq-default indent-tabs-mode nil)
-(delete-selection-mode)
+;; (delete-selection-mode)
 (global-set-key (kbd "RET") 'newline-and-indent)
 
 ;; GROUP: Editing -> Killing

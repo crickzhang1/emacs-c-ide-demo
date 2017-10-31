@@ -23,27 +23,33 @@
 (use-package cc-mode
   :config
   (define-key c-mode-map  [(control tab)] 'company-complete)
-  (define-key c++-mode-map  [(control tab)] 'company-complete))
+  (define-key c++-mode-map  [(control tab)] 'company-complete)
+  )
 
 (use-package function-args
   :config
-  (fa-config-default))
-
-(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
-
-(set-default 'semantic-case-fold t)
+  (fa-config-default)
+  ;; Better parsing for headers
+  (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+  ;; Enable case-insensitive searching
+  (set-default 'semantic-case-fold t)
+  (semantic-add-system-include "~/usr/local/include" 'c++-mode)
+  )
 
 (use-package flycheck
   :init
-  (global-flycheck-mode))
+  (global-flycheck-mode)
+  )
 
 (use-package flycheck-color-mode-line
   :config
-  (add-hook 'flycheck-mode-hook 'flycheck-color-mode-line-mode))
+  (add-hook 'flycheck-mode-hook 'flycheck-color-mode-line-mode)
+  )
 
 (use-package flycheck-pos-tip
   :config
-  (flycheck-pos-tip-mode))
+  (flycheck-pos-tip-mode)
+  )
 
 (use-package flycheck-pkg-config)
 

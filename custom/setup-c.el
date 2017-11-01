@@ -33,7 +33,7 @@
   (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
   ;; Enable case-insensitive searching
   (set-default 'semantic-case-fold t)
-  (semantic-add-system-include "~/usr/local/include" 'c++-mode)
+  (semantic-add-system-include "/home/silvery/usr/local/include" 'c++-mode)
   )
 
 (use-package flycheck
@@ -52,5 +52,7 @@
   )
 
 (use-package flycheck-pkg-config)
+
+(use-package cmake-mode)
 
 (provide 'setup-c)

@@ -37,6 +37,9 @@
 (use-package adoc-mode
   :mode ("\\.adoc\\'" . adoc-mode))
 
+(use-package markdown-mode
+  :mode ("\\.md\\'" . markdown-mode))
+
 ;; Highlight lines longer than 80 characters
 ;; from: https://stackoverflow.com/questions/6344474/how-can-i-make-emacs-highlight-lines-that-go-over-80-chars
 (add-hook 'c-mode-hook '(lambda () (highlight-lines-matching-regexp ".\\{81\\}" 'hi-yellow)))

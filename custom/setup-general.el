@@ -28,9 +28,10 @@
 (server-start)
 
 ;; Theme
-(use-package monokai-theme
-  :config
-  (load-theme 'monokai t))
+(if (display-graphic-p)
+    (use-package monokai-theme
+      :config
+      (load-theme 'monokai t)))
 
 ;; Enable adoc-mode for asciidoc docs
 ;; see for more details: https://github.com/sensorflo/adoc-mode/wiki

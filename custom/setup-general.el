@@ -6,7 +6,10 @@
 (size-indication-mode t)
 (column-number-mode t)
 (show-paren-mode t)
-(global-hl-line-mode 1)
+
+(if (display-graphic-p)
+    (global-hl-line-mode 1))
+
 (global-linum-mode t)
 (toggle-save-place-globally t)
 ;; Disable auto-backup

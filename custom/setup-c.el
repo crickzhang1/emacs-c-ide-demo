@@ -55,4 +55,8 @@
 
 (use-package cmake-mode)
 
+(use-package qt-pro-mode
+  :ensure t
+  :mode ("\\.pro\\'" "\\.pri\\'"))
+
 (provide 'setup-c)

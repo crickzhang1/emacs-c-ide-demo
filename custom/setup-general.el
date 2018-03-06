@@ -44,6 +44,10 @@
 (use-package markdown-mode
   :mode ("\\.md\\'" . markdown-mode))
 
+(use-package yaml-mode
+  :ensure t
+  :mode ("\\.yaml\\'" "\\.yml\\'"))
+
 ;; Highlight lines longer than 80 characters
 ;; from: https://stackoverflow.com/questions/6344474/how-can-i-make-emacs-highlight-lines-that-go-over-80-chars
 ;;(add-hook 'c-mode-hook '(lambda () (highlight-lines-matching-regexp ".\\{81\\}" 'hi-yellow)))

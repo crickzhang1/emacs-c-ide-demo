@@ -20,7 +20,7 @@
 
 (use-package counsel-projectile
   :init
-  (counsel-projectile-on))
+  (counsel-projectile-mode))
 
 (use-package counsel-gtags)
 ;; Set company for gtags

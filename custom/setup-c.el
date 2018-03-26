@@ -59,4 +59,9 @@
   :ensure t
   :mode ("\\.pro\\'" "\\.pri\\'"))
 
+(use-package preproc-font-lock
+  :config
+  (preproc-font-lock-global-mode 1)
+  )
+
 (provide 'setup-c)

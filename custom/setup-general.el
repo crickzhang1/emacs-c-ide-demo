@@ -102,11 +102,12 @@
   (setq projectile-enable-caching t))
 
 ;; Package zygospore
+;; automatically indent when press RET
 (use-package zygospore
   :bind (("C-x 1" . zygospore-toggle-delete-other-windows)
          ("RET" .   newline-and-indent)))
 
-  ; automatically indent when press RET
+(use-package command-log-mode)
 
 ;; activate whitespace-mode to view all whitespace characters
 (global-set-key (kbd "C-c w") 'whitespace-mode)

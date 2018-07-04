@@ -48,6 +48,9 @@
 (require 'setup-editing)
 (require 'setup-c)
 (require 'setup-rust)
+(require 'setup-lisp)
+
+(require 'setup-silvery)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -59,7 +62,7 @@
     ("8ed752276957903a270c797c4ab52931199806ccd9f0c3bb77f6f4b9e71b9272" default)))
  '(package-selected-packages
    (quote
-    (zygospore helm-gtags helm yasnippet ws-butler volatile-highlights use-package undo-tree iedit dtrt-indent counsel-projectile company clean-aindent-mode anzu monokai-theme adoc-mode markdown-mode)))
+    (magit zygospore helm-gtags helm yasnippet ws-butler volatile-highlights use-package undo-tree iedit dtrt-indent counsel-projectile company clean-aindent-mode anzu monokai-theme adoc-mode markdown-mode)))
  '(save-place t)
  '(save-place-mode t nil (saveplace)))
 (custom-set-faces

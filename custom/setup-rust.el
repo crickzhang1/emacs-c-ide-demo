@@ -12,7 +12,7 @@
 (use-package racer
   :config
   (setq racer-cmd "~/.cargo/bin/racer")
-  (setq racer-rust-src-path "~/.multirust/src/rust/src")
+  (setq racer-rust-src-path "~/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src")
 
   (add-hook 'rust-mode-hook #'racer-mode)
   (add-hook 'racer-mode-hook #'eldoc-mode)

@@ -65,6 +65,8 @@
                                ":"
                                "/usr/linux/include"
                                ":"
+                               "/usr/include/x86_64-linux-gnu"
+                               ":"
                                (file-truename "~/usr/local/include")
                                ":"
                                (file-truename "~/usr/local/linux/include")))
